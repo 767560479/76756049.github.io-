@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="&lt; font size &#x3D;4 &gt;  业务1234567891011&#x2F;** * 保费计算接口 * * @author tzf *&#x2F;public interface PremiumCalculate &amp;#123;    &#x2F;&#x2F;保费计算    Result calculate(Param param);    &#x2F;&#x2F;其他的保费计算中需要">
+<meta name="description" content="业务1234567891011&#x2F;** * 保费计算接口 * * @author tzf *&#x2F;public interface PremiumCalculate &amp;#123;    &#x2F;&#x2F;保费计算    Result calculate(Param param);    &#x2F;&#x2F;其他的保费计算中需要的方法    ...&amp;#125;  这里spri">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用Spring干掉if else">
 <meta property="og:url" content="http://yoursite.com/2020/03/28/else/index.html">
-<meta property="og:site_name" content="TZF">
-<meta property="og:description" content="&lt; font size &#x3D;4 &gt;  业务1234567891011&#x2F;** * 保费计算接口 * * @author tzf *&#x2F;public interface PremiumCalculate &amp;#123;    &#x2F;&#x2F;保费计算    Result calculate(Param param);    &#x2F;&#x2F;其他的保费计算中需要">
+<meta property="og:site_name" content="猪婷别气了">
+<meta property="og:description" content="业务1234567891011&#x2F;** * 保费计算接口 * * @author tzf *&#x2F;public interface PremiumCalculate &amp;#123;    &#x2F;&#x2F;保费计算    Result calculate(Param param);    &#x2F;&#x2F;其他的保费计算中需要的方法    ...&amp;#125;  这里spri">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-28T07:58:40.000Z">
-<meta property="article:modified_time" content="2020-03-28T08:03:16.002Z">
+<meta property="article:modified_time" content="2020-03-28T08:08:41.544Z">
 <meta property="article:author" content="TZF">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary">
@@ -126,7 +126,7 @@
 
 
 
-  <title>用Spring干掉if else | TZF</title>
+  <title>用Spring干掉if else | 猪婷别气了</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">TZF</span>
+        <span class="site-title">猪婷别气了</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -242,7 +242,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TZF">
+      <meta itemprop="name" content="猪婷别气了">
     </span>
 
     
@@ -300,8 +300,7 @@
       
 
       
-        <p>&lt; font size =4 &gt; </p>
-<h3 id="业务"><a href="#业务" class="headerlink" title="业务"></a>业务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 保费计算接口</span><br><span class="line"> *</span><br><span class="line"> * @author tzf</span><br><span class="line"> *&#x2F;</span><br><span class="line">public interface PremiumCalculate &#123;</span><br><span class="line">    &#x2F;&#x2F;保费计算</span><br><span class="line">    Result calculate(Param param);</span><br><span class="line">    &#x2F;&#x2F;其他的保费计算中需要的方法</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="业务"><a href="#业务" class="headerlink" title="业务"></a>业务</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 保费计算接口</span><br><span class="line"> *</span><br><span class="line"> * @author tzf</span><br><span class="line"> *&#x2F;</span><br><span class="line">public interface PremiumCalculate &#123;</span><br><span class="line">    &#x2F;&#x2F;保费计算</span><br><span class="line">    Result calculate(Param param);</span><br><span class="line">    &#x2F;&#x2F;其他的保费计算中需要的方法</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>这里spring容器就可以排上用场了。spring中有一个BeanFactory对象，也是一个工厂，我们可以用它来改造PremiumCalculateFactory。<br>首先我们在编写各个产品对应的保费计算实现类的时候都会将它注册进spring容器中，成为一个bean。我们需要给这个bean指定一个名称比如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;在这里指定bean的名称</span><br><span class="line">@Service(&quot;PremiumCalculate:&quot;+产品编号)</span><br><span class="line">public class PremiumCalculateP0001Impl implements PremiumCalculate &#123;</span><br><span class="line">    。。。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -309,7 +308,7 @@
 <p>然后修改PremiumCalculateFactory</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;**</span><br><span class="line"> * 保费计算接口工厂类</span><br><span class="line"> *&#x2F;</span><br><span class="line">@Service</span><br><span class="line">public class PremiumCalculateFactory &#123;</span><br><span class="line">    @Autowired</span><br><span class="line">    private BeanFactory beanFactory;</span><br><span class="line"></span><br><span class="line">    public PremiumCalculate getPremiumCalculate(String productCode) &#123;</span><br><span class="line">        Object bean &#x3D; beanFactory.getBean(&quot;PremiumCalculate:&quot; + productCode);</span><br><span class="line">        if (bean instanceof PremiumCalculate) &#123;</span><br><span class="line">            return (PremiumCalculate) bean;</span><br><span class="line">        &#125;</span><br><span class="line">        throw new UnsupportedOperationException(&quot;不支持的编号：&quot; + productCode);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</font>
+
       
     </div>
     
@@ -335,22 +334,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/03/28/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -428,7 +411,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
